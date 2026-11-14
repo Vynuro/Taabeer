@@ -29,51 +29,59 @@ function taabeer_heritage_arts() {
 		'art-of-wear'      => array(
 			'title'   => 'Art of Wear',
 			'short'   => 'Contemporary silhouettes rooted in tradition',
-			'intro'   => 'Clothing and textiles where generations of handwork meet the cut of today. From hand-embroidered kurtas and heirloom shawls to quietly modern silhouettes, each piece is chosen for the hands that made it and the ease with which it is worn.',
-			'image'   => 'art-wear.webp',
-			'card'    => 'kurta-portrait.webp',
+			'tagline' => 'Heritage, woven into the way you dress.',
+			'intro'   => 'A curated blend of luxury heritage and contemporary silhouettes, bringing together expressive textiles, considered details and distinctive personal style.',
+			'image'   => 'london-wear.webp',
+			'card'    => 'london-wear-card.webp',
 			'quote'   => 'Every stitch is a sentence in a story that has been told for centuries — we simply give it a new voice.',
-			'feature' => array( 'hand-stitch.webp', 'The hand behind the hem', 'Zardozi, tilla, chikankari and shadow work are slow arts. A single panel can hold weeks of patient work. We seek out ateliers that honour these techniques while cutting for the way we live now — lighter fabrics, cleaner lines and pieces that move easily from occasion to everyday.' ),
+			'feature' => array( 'hand-stitch.webp', 'The hand behind the hem', 'Zardozi, tilla, chikankari and shadow work are slow arts, learned in the workshops of Lahore, Multan and Hyderabad. A single panel can hold weeks of patient work. We choose pieces that honour these techniques while cutting for the way we dress in London today — lighter fabrics, cleaner lines and pieces that move easily from occasion to everyday.' ),
 			'areas'   => array(
-				array( 'bride-portrait.webp', 'Heritage Couture', 'Occasion wear finished by hand, with the weight and presence of an heirloom.' ),
-				array( 'art-wear.webp', 'Contemporary Silhouettes', 'Relaxed, modern shapes printed and finished with traditional craft.' ),
-				array( 'tile-embroidery.webp', 'Textiles & Shawls', 'Embroidered, woven and block-printed cloth to treasure and to wear.' ),
+				array( 'tile-embroidery.webp', 'Shawls', 'A considered selection of shawls celebrating rich patterns, beautiful textures and the enduring elegance of draped textiles.' ),
+				array( 'art-wear.webp', 'Clothing & Statement Jackets', 'Shirts, kurtas, complete outfits and dressy jackets that bring heritage influences into contemporary dressing.' ),
+				array( '', 'The Footwear Edit', 'Distinctive footwear selected for its design, character and ability to complement both traditional and contemporary wardrobes.' ),
+				array( '', 'The Headwear Edit', 'Thoughtfully selected head coverings and accessories that bring a finishing touch to personal style.' ),
 			),
 		),
 		'art-of-living'    => array(
 			'title'   => 'Art of Living',
 			'short'   => 'Elegant spaces, heritage at home',
-			'intro'   => 'Rugs, vessels, screens and objects that bring warmth and provenance into a home. Pieces with a sense of place, chosen to be lived with every day and passed on in time.',
-			'image'   => 'art-living.webp',
-			'card'    => 'art-living.webp',
+			'tagline' => 'Pakistani craft, at home in London.',
+			'intro'   => 'Considered pieces for a beautifully lived-in home, bringing Pakistani craftsmanship and contemporary design into everyday spaces.',
+			'image'   => 'london-living.webp',
+			'card'    => 'london-living-card.webp',
 			'quote'   => 'A home is the most personal gallery we will ever curate.',
-			'feature' => array( 'jali-corridor.webp', 'Light, pattern and stillness', 'The carved jali screen filters harsh sunlight into soft pattern; the hand-knotted rug turns a floor into a landscape. The Art of Living gathers objects that carry that same quiet intelligence — beautiful, useful and rooted in centuries of making.' ),
+			'feature' => array( 'jali-corridor.webp', 'Light, pattern and stillness', 'In the havelis of Lahore, the carved jali screen filters harsh sunlight into soft pattern and the hand-knotted rug turns a floor into a landscape. The Art of Living brings that same quiet intelligence into a London home — beautiful, useful and rooted in centuries of making.' ),
 			'areas'   => array(
-				array( 'tile-rug.webp', 'Rugs & Textiles', 'Hand-knotted and hand-woven pieces that ground a room.' ),
-				array( 'tile-vessels.webp', 'Objects & Vessels', 'Ceramics, brass and stone shaped by hand for the table and shelf.' ),
-				array( 'tile-jali.webp', 'Light & Screen', 'Lanterns, lattice and carved wood that play with light.' ),
+				array( 'london-living-card.webp', 'Furniture', 'Distinctive furniture chosen for its craftsmanship, character and balance of beauty and function.' ),
+				array( 'tile-rug.webp', 'Textiles & Soft Furnishings', 'Cushions, throws and decorative textiles that bring warmth, texture and artistic detail into the home.' ),
+				array( 'tile-vessels.webp', 'Tableware', 'Carefully selected pieces for serving, dining and gathering, bringing artistry to the everyday table.' ),
+				array( 'tile-jali.webp', 'Crafted Accessories', 'Decorative accents and useful objects that celebrate the maker’s touch and add individuality to a space.' ),
 			),
 		),
 		'art-of-expression' => array(
 			'title'   => 'Art of Expression',
 			'short'   => 'Artisanal stationery, calligraphy & art',
-			'intro'   => 'Calligraphy, works on paper, hand-printed pattern and fine stationery. The Art of Expression celebrates the written and drawn line — the oldest way a culture tells its own story.',
-			'image'   => 'art-expression.webp',
-			'card'    => 'art-expression.webp',
+			'tagline' => 'Distinctive art. Stories of Pakistan.',
+			'intro'   => 'Art, objects and the written word, from Pakistan’s calligraphers, printmakers, metalworkers and textile artists to the contemporary voices reinterpreting them — chosen to bring character and meaning into a space.',
+			'image'   => 'london-expression.webp',
+			'card'    => 'london-expression-card.webp',
 			'quote'   => 'In the stroke of a qalam lies the discipline of a lifetime and the freedom of a moment.',
-			'feature' => array( 'print-blocks.webp', 'Pattern carved by hand', 'Before a single sheet is printed, a block is carved in wood by hand. We present artists, calligraphers and printmakers whose work continues these traditions on paper, cloth and canvas — signed, limited and made to be kept.' ),
+			'feature' => array( 'print-blocks.webp', 'Pattern carved by hand', 'Before a single sheet is printed in Sindh, a block is carved in wood by hand. We present artists, calligraphers and printmakers whose work continues these traditions on paper, cloth and canvas — signed, limited and made to be kept.' ),
 			'areas'   => array(
-				array( 'calligraphy-board.webp', 'Calligraphy', 'Original works and commissions by contemporary masters of the line.' ),
-				array( 'print-blocks.webp', 'Print & Pattern', 'Hand-carved blocks and the prints, papers and cloth they create.' ),
-				array( 'art-expression.webp', 'Fine Stationery', 'Writing papers, journals and desk objects for considered correspondence.' ),
+				array( 'calligraphy-board.webp', 'Art & Prints', 'A curated collection of artworks and prints exploring heritage, identity and contemporary expression.' ),
+				array( '', 'Sculpture & Decorative Art', 'Distinctive sculptural pieces and decorative objects that bring character and artistry into a space.' ),
+				array( 'tile-embroidery.webp', 'Textile Art', 'Creative expressions in thread, weave and embroidery, celebrating the richness of textile traditions.' ),
+				array( 'tile-lion.webp', 'Metalwork', 'Artistic objects in metal, celebrating intricate detail, skilled craftsmanship and enduring design.' ),
+				array( 'art-expression.webp', 'Fine Stationery & Calligraphy', 'Thoughtfully crafted stationery, writing tools and calligraphic pieces celebrating the beauty of the written word.' ),
 			),
 		),
 		'art-of-adornment' => array(
 			'title'   => 'Art of Adornment',
 			'short'   => 'Heritage jewellery, contemporary hands',
+			'tagline' => 'Distinctive jewellery. Individual expression.',
 			'intro'   => 'Kundan, polki, jhumkas and hand-finished accessories. The Art of Adornment brings together heirloom techniques and contemporary design — jewellery made to be worn, remembered and inherited.',
-			'image'   => 'art-adornment.webp',
-			'card'    => 'art-adornment.webp',
+			'image'   => 'london-adornment.webp',
+			'card'    => 'london-adornment-card.webp',
 			'quote'   => 'Adornment is how heritage is carried closest to the heart.',
 			'feature' => array( 'bride-portrait.webp', 'Made to be inherited', 'Kundan setting, meenakari enamel and filigree are techniques passed from master to apprentice. We work with jewellers who keep these skills alive while designing pieces light enough for today and remarkable enough for the occasions that matter.' ),
 			'areas'   => array(
@@ -85,9 +93,10 @@ function taabeer_heritage_arts() {
 		'art-of-antiques'  => array(
 			'title'   => 'Art of Antiques',
 			'short'   => 'Museum-quality pieces with provenance',
+			'tagline' => 'Objects with history. Stories to treasure.',
 			'intro'   => 'Brass, carved wood, ceramics and architectural fragments, each with a story behind it. The Art of Antiques presents pieces chosen for craftsmanship, condition and character, with care taken over their history and provenance.',
-			'image'   => 'art-antiques.webp',
-			'card'    => 'art-antiques.webp',
+			'image'   => 'london-antiques.webp',
+			'card'    => 'london-antiques-card.webp',
 			'quote'   => 'An antique is a conversation with the hands of another century.',
 			'feature' => array( 'heritage-arch.webp', 'Provenance, patina and care', 'Every antique is examined, researched and described honestly — its age, its material and any restoration it has received. We prefer pieces that show the life they have lived, and we share what is known of their journey so they can be enjoyed with confidence.' ),
 			'areas'   => array(
@@ -211,7 +220,7 @@ function taabeer_heritage_footer_data() {
 					array(
 						taabeer_visual_container( array( taabeer_visual_heading( 'The Curated Arts', 'h3' ), taabeer_visual_text( '<ul>' . $arts . '</ul>', 'site-footer__menu' ) ), 'tb-hx-footer__col' ),
 						taabeer_visual_container( array( taabeer_visual_heading( 'The House', 'h3' ), taabeer_visual_text( '<ul>' . $house . '</ul>', 'site-footer__menu' ) ), 'tb-hx-footer__col' ),
-						taabeer_visual_container( array( taabeer_visual_heading( 'Visit', 'h3' ), taabeer_visual_text( '<p>London, United Kingdom<br>Private viewings by appointment</p>' ) ), 'tb-hx-footer__col' ),
+						taabeer_visual_container( array( taabeer_visual_heading( 'Contact', 'h3' ), taabeer_visual_text( taabeer_london_contact_html(), 'tb-hx-footer__contact' ) ), 'tb-hx-footer__col' ),
 						taabeer_visual_container( array( taabeer_visual_heading( 'Information', 'h3' ), taabeer_visual_text( '<ul>' . $info . '</ul>', 'site-footer__menu' ), taabeer_visual_widget( 'taabeer-utility', array( 'kind' => 'cookies', 'label' => 'Cookie settings' ), 'site-footer__cookie-button' ) ), 'tb-hx-footer__col' ),
 					),
 					'tb-hx-footer__grid'
@@ -255,13 +264,13 @@ function taabeer_heritage_home_data() {
 		array(
 			taabeer_visual_container(
 				array(
-					taabeer_hx_image( taabeer_art_image_url( 'hero-portrait.webp' ), 'tb-hx-hero__image', 'A woman in ivory wearing heritage kundan jewellery, photographed in warm window light' ),
+					taabeer_hx_image( taabeer_art_image_url( 'london-wear-card.webp' ), 'tb-hx-hero__image', 'A woman in an ivory kurta with a hand-printed Pakistani shawl, walking past a Georgian doorway in London' ),
 					taabeer_visual_container(
 						array(
 							taabeer_hx_image( taabeer_brand_url( 'mark' ), 'tb-hx-hero__mark' ),
-							taabeer_hx_eyebrow( 'Curating Expressions of Pakistan', 'eyebrow--gold' ),
+							taabeer_hx_eyebrow( 'A London house of Pakistani design', 'eyebrow--gold' ),
 							taabeer_visual_heading( 'Weaving the Soul <em>of Heritage</em>', 'h1' ),
-							taabeer_visual_text( '<p>Five curated arts, one living heritage. Discover Pakistani craftsmanship and contemporary design, chosen with care and presented as it deserves.</p>', 'tb-hx-hero__intro' ),
+							taabeer_visual_text( '<p>Pakistani craftsmanship and contemporary design, curated in London. Pieces made by Pakistan’s artisans and emerging designers, chosen for homes and wardrobes across the UK.</p>', 'tb-hx-hero__intro' ),
 							taabeer_visual_container(
 								array(
 									taabeer_visual_button( 'Discover the Arts', '#curated-arts', 'button button--gold' ),
@@ -286,7 +295,7 @@ function taabeer_heritage_home_data() {
 			taabeer_hx_ornament(),
 			taabeer_hx_eyebrow( 'The House of TAABEER', 'eyebrow--gold' ),
 			taabeer_visual_heading( 'Where heritage is not preserved behind glass, but lived, worn and treasured', 'h2' ),
-			taabeer_visual_text( '<p>TAABEER — <span lang="ur" dir="rtl">تعبیر</span> — means expression and interpretation. We bring together the finest of Pakistan’s heritage crafts and the designers reimagining them, presenting each piece with its story, its maker and the care that shaped it.</p>', 'tb-hx-intro__copy' ),
+			taabeer_visual_text( '<p>TAABEER — <span lang="ur" dir="rtl">تعبیر</span> — means expression and interpretation. Rooted in Pakistan and based in London, we bring together the finest of Pakistan’s heritage crafts and the designers reimagining them — for the diaspora who grew up with these traditions, and for everyone discovering them for the first time.</p>', 'tb-hx-intro__copy' ),
 		),
 		'tb-hx-intro shell',
 		'section'
@@ -340,13 +349,13 @@ function taabeer_heritage_home_data() {
 			taabeer_visual_container( array( taabeer_hx_image( taabeer_art_image_url( 'heritage-arch.webp' ), 'tb-hx-split__image tb-arch', 'A carved Mughal arch framing the Lahore Fort' ) ), 'tb-hx-split__media' ),
 			taabeer_visual_container(
 				array(
-					taabeer_hx_eyebrow( 'Heritage & Contemporary', 'eyebrow--gold' ),
-					taabeer_visual_heading( 'Luxury rooted in five centuries of making', 'h2' ),
-					taabeer_visual_text( '<p>From the carved arches of Lahore to the quiet ateliers of Karachi and Multan, Pakistan holds one of the world’s richest craft heritages. TAABEER presents it with the restraint and finish of contemporary luxury — fewer pieces, better told.</p>' ),
+					taabeer_hx_eyebrow( 'From Pakistan to London', 'eyebrow--gold' ),
+					taabeer_visual_heading( 'Stories from Pakistan, at home in London', 'h2' ),
+					taabeer_visual_text( '<p>Every piece begins somewhere: the carved arches of Lahore, the block-printers of Sindh, the embroiderers of Swat and the quiet ateliers of Karachi and Multan. TAABEER brings that heritage to London with the restraint and finish of contemporary luxury — fewer pieces, better told, and always credited to the hands that made them.</p>' ),
 					taabeer_visual_container(
 						array(
 							taabeer_visual_container( array( taabeer_visual_heading( 'Curated', 'h3' ), taabeer_visual_text( '<p>Every piece is selected in person, for quality and character.</p>' ) ), 'tb-hx-pillar' ),
-							taabeer_visual_container( array( taabeer_visual_heading( 'Crafted', 'h3' ), taabeer_visual_text( '<p>Made by hand by master artisans and independent studios.</p>' ) ), 'tb-hx-pillar' ),
+							taabeer_visual_container( array( taabeer_visual_heading( 'Crafted', 'h3' ), taabeer_visual_text( '<p>Made by hand by master artisans, women makers and independent studios.</p>' ) ), 'tb-hx-pillar' ),
 							taabeer_visual_container( array( taabeer_visual_heading( 'Cherished', 'h3' ), taabeer_visual_text( '<p>Presented with its story, to be kept and passed on.</p>' ) ), 'tb-hx-pillar' ),
 						),
 						'tb-hx-pillars'
@@ -383,7 +392,7 @@ function taabeer_heritage_home_data() {
 				array(
 					taabeer_hx_ornament(),
 					taabeer_hx_eyebrow( 'The TAABEER Circle', 'eyebrow--gold' ),
-					taabeer_visual_heading( 'Be the first to discover new pieces, stories and private viewings', 'h2' ),
+					taabeer_visual_heading( 'Be the first to discover new pieces, brands and stories', 'h2' ),
 				),
 				'tb-hx-newsletter__copy'
 			),
@@ -393,7 +402,7 @@ function taabeer_heritage_home_data() {
 		'section'
 	);
 
-	return array( $hero, $intro, $curated, $story, $heritage, $journal, $newsletter );
+	return array( $hero, $intro, $curated, taabeer_london_brands_section(), $story, $heritage, $journal, $newsletter );
 }
 
 /* ---------------------------------------------------------------------------
@@ -411,18 +420,18 @@ function taabeer_heritage_art_page_data( $slug ) {
 				array(
 					taabeer_hx_eyebrow( sprintf( 'The Curated Arts · %02d', $index ), 'eyebrow--gold' ),
 					taabeer_visual_heading( $art['title'], 'h1' ),
-					taabeer_visual_text( '<p class="tb-hx-lede">' . esc_html( $art['short'] ) . '</p><p>' . esc_html( $art['intro'] ) . '</p>', 'tb-hx-art-hero__intro' ),
+					taabeer_visual_text( '<p class="tb-hx-lede">' . esc_html( $art['tagline'] ) . '</p><p>' . esc_html( $art['intro'] ) . '</p>', 'tb-hx-art-hero__intro' ),
 					taabeer_visual_container(
 						array(
 							taabeer_visual_button( 'Enquire about a piece', home_url( '/contact/?enquiry=collection' ), 'button button--gold' ),
-							taabeer_visual_button( 'Book a private viewing', home_url( '/contact/' ), 'text-link text-link--light' ),
+							taabeer_visual_button( 'Contact TAABEER', home_url( '/contact/' ), 'text-link text-link--light' ),
 						),
 						'button-row'
 					),
 				),
 				'tb-hx-art-hero__content'
 			),
-			taabeer_visual_container( array( taabeer_hx_image( taabeer_art_image_url( $art['image'] ), 'tb-hx-art-hero__image tb-arch' ) ), 'tb-hx-art-hero__media' ),
+			taabeer_visual_container( array( taabeer_hx_image( taabeer_art_image_url( $art['card'] ), 'tb-hx-art-hero__image tb-arch', 'The ' . $art['title'] . ' by TAABEER: Pakistani craftsmanship in a London setting' ) ), 'tb-hx-art-hero__media' ),
 		),
 		'tb-hx-art-hero',
 		'section'
@@ -430,9 +439,12 @@ function taabeer_heritage_art_page_data( $slug ) {
 
 	$areas = array();
 	foreach ( $art['areas'] as $area ) {
+		$image   = $area[0]
+			? taabeer_hx_image( taabeer_art_image_url( $area[0] ), 'tb-hx-area__image', $area[1] )
+			: taabeer_hx_image( taabeer_brand_url( 'mark' ), 'tb-hx-area__image tb-hx-area__image--pending', '' );
 		$areas[] = taabeer_visual_container(
 			array(
-				taabeer_hx_image( taabeer_art_image_url( $area[0] ), 'tb-hx-area__image' ),
+				$image,
 				taabeer_visual_heading( $area[1], 'h3' ),
 				taabeer_visual_text( '<p>' . esc_html( $area[2] ) . '</p>' ),
 			),
@@ -442,7 +454,7 @@ function taabeer_heritage_art_page_data( $slug ) {
 	$within = taabeer_visual_container(
 		array(
 			taabeer_visual_container( array( taabeer_hx_eyebrow( 'Within the ' . $art['title'], 'eyebrow--gold' ), taabeer_visual_heading( 'Explore the collection', 'h2' ) ), 'tb-hx-heading' ),
-			taabeer_visual_container( $areas, 'tb-hx-areas' ),
+			taabeer_visual_container( $areas, 'tb-hx-areas tb-hx-areas--' . count( $areas ) ),
 		),
 		'tb-hx-within shell',
 		'section'
@@ -463,7 +475,7 @@ function taabeer_heritage_art_page_data( $slug ) {
 			taabeer_visual_container( array( taabeer_hx_image( taabeer_art_image_url( $art['feature'][0] ), 'tb-hx-split__image tb-arch' ) ), 'tb-hx-split__media' ),
 			taabeer_visual_container(
 				array(
-					taabeer_hx_eyebrow( 'The craft', 'eyebrow--gold' ),
+					taabeer_hx_eyebrow( 'The story from Pakistan', 'eyebrow--gold' ),
 					taabeer_visual_heading( $art['feature'][1], 'h2' ),
 					taabeer_visual_text( '<p>' . esc_html( $art['feature'][2] ) . '</p>' ),
 					taabeer_visual_button( 'Read the Journal', taabeer_heritage_journal_url(), 'text-link' ),
@@ -475,42 +487,42 @@ function taabeer_heritage_art_page_data( $slug ) {
 		'section'
 	);
 
-	$appointment = taabeer_visual_container(
+	$enquire = taabeer_visual_container(
 		array(
-			taabeer_hx_eyebrow( 'By appointment', 'eyebrow--gold' ),
+			taabeer_hx_eyebrow( 'From Pakistan to London', 'eyebrow--gold' ),
 			taabeer_visual_heading( 'Pieces are released in limited editions', 'h2' ),
-			taabeer_visual_text( '<p>Register your interest to be told first when new pieces arrive, or arrange a private viewing in London.</p>' ),
+			taabeer_visual_text( '<p>Register your interest to hear first when new pieces arrive, or contact us with any question about a piece, its maker or its story.</p>' ),
 			taabeer_visual_button( 'Register your interest', home_url( '/contact/?enquiry=collection' ), 'button button--gold' ),
 		),
 		'tb-hx-appointment',
 		'section'
 	);
 
+	// All five Arts, so a visitor always sees the full set; the current one is marked.
 	$others = array();
 	foreach ( $arts as $other_slug => $other ) {
-		if ( $other_slug === $slug ) {
-			continue;
-		}
-		$others[] = taabeer_hx_link_box(
-			array(
-				taabeer_hx_image( taabeer_art_image_url( $other['card'] ), 'tb-hx-art__image tb-arch' ),
-				taabeer_visual_heading( $other['title'], 'h3', 'tb-hx-art__title' ),
-				taabeer_visual_text( '<p>' . esc_html( $other['short'] ) . '</p>', 'tb-hx-art__short' ),
-			),
-			'tb-hx-art tb-hx-art--compact',
-			home_url( '/' . $other_slug . '/' )
+		$current  = $other_slug === $slug;
+		$children = array(
+			taabeer_hx_image( taabeer_art_image_url( $other['card'] ), 'tb-hx-art__image tb-arch' ),
+			taabeer_visual_heading( $other['title'], 'h3', 'tb-hx-art__title' ),
+			taabeer_visual_text( '<p>' . esc_html( $current ? 'You are here' : $other['short'] ) . '</p>', 'tb-hx-art__short' ),
 		);
+		$others[] = taabeer_hx_link_box( $children, 'tb-hx-art tb-hx-art--compact' . ( $current ? ' tb-hx-art--current' : '' ), home_url( '/' . $other_slug . '/' ) );
 	}
 	$more = taabeer_visual_container(
 		array(
 			taabeer_visual_container( array( taabeer_hx_eyebrow( 'Continue exploring', 'eyebrow--gold' ), taabeer_visual_heading( 'The Curated Arts', 'h2' ) ), 'tb-hx-heading' ),
-			taabeer_visual_container( $others, 'tb-hx-arts tb-hx-arts--four' ),
+			taabeer_visual_container( $others, 'tb-hx-arts tb-hx-arts--all' ),
 		),
-		'tb-hx-curated shell',
+		'tb-hx-curated tb-hx-curated--more shell',
 		'section'
 	);
 
-	return array( $hero, $within, $quote, $feature, $appointment, $more );
+	$sections = array( $hero, $within );
+	if ( 'art-of-wear' === $slug ) {
+		$sections[] = taabeer_london_shawl_edit();
+	}
+	return array_merge( $sections, array( $quote, $feature, $enquire, $more ) );
 }
 
 /* ---------------------------------------------------------------------------
@@ -753,6 +765,7 @@ add_action(
 	'wp_enqueue_scripts',
 	function () {
 		wp_enqueue_style( 'taabeer-heritage', TAABEER_URI . '/assets/css/heritage.css', array( 'taabeer-visual-editor' ), TAABEER_VERSION );
+		wp_enqueue_style( 'taabeer-london', TAABEER_URI . '/assets/css/london.css', array( 'taabeer-heritage' ), TAABEER_VERSION );
 	},
 	6
 );
@@ -786,5 +799,6 @@ add_action(
 	'elementor/preview/enqueue_styles',
 	function () {
 		wp_enqueue_style( 'taabeer-heritage-preview', TAABEER_URI . '/assets/css/heritage.css', array(), TAABEER_VERSION );
+		wp_enqueue_style( 'taabeer-london-preview', TAABEER_URI . '/assets/css/london.css', array( 'taabeer-heritage-preview' ), TAABEER_VERSION );
 	}
 );

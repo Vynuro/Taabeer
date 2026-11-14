@@ -1,0 +1,96 @@
+/*
+ * TAABEER 2.1 — From Pakistan to London.
+ * New sections in the existing Heritage language: same palette, type and arch.
+ */
+
+/* Art sub-sections: four or five per Art. */
+.taabeer-site .e-con.tb-hx-areas--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.taabeer-site .e-con.tb-hx-areas--5 { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: clamp(16px, 2vw, 28px); }
+.taabeer-site .e-con.tb-hx-areas--4 .tb-hx-area .elementor-widget-heading,
+.taabeer-site .e-con.tb-hx-areas--5 .tb-hx-area .elementor-widget-heading { font-size: clamp(1.4rem, 1.8vw, 1.8rem); }
+.taabeer-site .e-con.tb-hx-areas--5 .tb-hx-area .elementor-widget-text-editor { font-size: 0.9rem; }
+
+/* Photography to follow: the monogram on deep green, so the grid stays complete. */
+.taabeer-site .tb-visual.tb-hx-area__image--pending { display: flex; align-items: center; justify-content: center; background: radial-gradient(120% 90% at 0% 100%, #123f31 0%, var(--taabeer-green-deep) 62%); box-shadow: inset 0 0 0 1px var(--tb-gold-line); }
+.taabeer-site .tb-hx-area__image--pending img { width: 34% !important; height: auto !important; object-fit: contain !important; opacity: 0.9; }
+.taabeer-site .e-con.tb-hx-area:hover .tb-hx-area__image--pending img { transform: none; }
+
+@media (max-width: 1100px) {
+  .taabeer-site .e-con.tb-hx-areas--4,
+  .taabeer-site .e-con.tb-hx-areas--5 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 22px; }
+}
+@media (max-width: 600px) {
+  .taabeer-site .e-con.tb-hx-areas--4,
+  .taabeer-site .e-con.tb-hx-areas--5 { grid-template-columns: 1fr; gap: 44px; }
+}
+
+/* Continue exploring: all five Arts, the current one marked. */
+.taabeer-site .e-con.tb-hx-curated--more { padding-top: var(--tb-section); }
+.taabeer-site .e-con.tb-hx-art--current .tb-hx-art__short { color: var(--tb-gold-text); font-size: 0.66rem; font-weight: 500; letter-spacing: 0.24em; text-transform: uppercase; }
+.taabeer-site .e-con.tb-hx-art--current .tb-hx-art__image { box-shadow: inset 0 0 0 2px var(--taabeer-gold); opacity: 0.82; }
+
+/* Brands */
+.taabeer-site .e-con.tb-ldn-brands { padding-block: 0 var(--tb-section); }
+.taabeer-site .tb-visual.tb-ldn-brands__intro { max-width: 52ch; color: var(--taabeer-muted); font-size: 1.04rem; line-height: 1.75; text-align: center; }
+.taabeer-site .e-con.tb-ldn-brands__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--tb-gold-line); border: 1px solid var(--tb-gold-line); }
+.taabeer-site .e-con.tb-ldn-brand { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; min-height: 132px; padding: 22px 16px; background: var(--taabeer-ivory); text-align: center; transition: background-color .3s ease; }
+.taabeer-site .e-con.tb-ldn-brand:hover { background: #fbf7ef; }
+.taabeer-site .tb-visual.tb-ldn-brand__name { font-size: clamp(1.3rem, 1.7vw, 1.65rem); line-height: 1.15; }
+.taabeer-site .tb-ldn-brand__name .elementor-heading-title { color: var(--tb-ink); }
+.taabeer-site .e-con.tb-ldn-brand--own { grid-column: span 2; grid-row: span 2; gap: 14px; padding: 36px 28px; background: radial-gradient(120% 90% at 0% 100%, #123f31 0%, var(--taabeer-green-deep) 62%); }
+.taabeer-site .e-con.tb-ldn-brand--own:hover { background: radial-gradient(120% 90% at 0% 100%, #154535 0%, var(--taabeer-green-deep) 62%); }
+.taabeer-site .tb-ldn-brand--own .tb-visual.eyebrow--gold { color: var(--tb-gold-light); }
+.taabeer-site .tb-ldn-brand--own .tb-visual.tb-ldn-brand__name { font-size: clamp(2rem, 3vw, 2.8rem); }
+.taabeer-site .tb-ldn-brand--own .tb-ldn-brand__name .elementor-heading-title { color: #fbf6ec; }
+.taabeer-site .tb-ldn-brand__mark { width: auto !important; line-height: 0; }
+.taabeer-site .tb-ldn-brand__mark img { width: auto !important; height: 54px !important; object-fit: contain !important; }
+@media (max-width: 1100px) {
+  .taabeer-site .e-con.tb-ldn-brands__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .taabeer-site .e-con.tb-ldn-brand--own { grid-column: 1 / -1; grid-row: auto; }
+}
+@media (max-width: 600px) {
+  .taabeer-site .e-con.tb-ldn-brands__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .taabeer-site .e-con.tb-ldn-brand { min-height: 104px; padding: 18px 12px; }
+  .taabeer-site .tb-visual.tb-ldn-brand__name { font-size: 1.2rem; }
+}
+
+/* The Shawl Edit (Art of Wear) */
+.taabeer-site .e-con.tb-ldn-shawls { display: grid; grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr); gap: clamp(40px, 6vw, 96px); align-items: start; padding: var(--tb-section) max(24px, calc((100% - 1280px) / 2)); background: var(--taabeer-green-deep); color: var(--tb-on-dark); }
+.taabeer-site .e-con.tb-ldn-shawls__media { position: sticky; top: 140px; }
+.taabeer-site .tb-visual.tb-ldn-shawls__image { aspect-ratio: 4 / 5.6; overflow: hidden; }
+.taabeer-site .tb-ldn-shawls__image img { width: 100%; height: 100% !important; object-fit: cover; }
+.taabeer-site .e-con.tb-ldn-shawls__content { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; }
+.taabeer-site .tb-ldn-shawls .tb-visual.eyebrow--gold { color: var(--tb-gold-light); }
+.taabeer-site .tb-ldn-shawls__content > .elementor-widget-heading { font-size: clamp(2.3rem, 3.9vw, 3.7rem); line-height: 1.06; }
+.taabeer-site .tb-ldn-shawls .elementor-heading-title { color: #fbf6ec; }
+.taabeer-site .tb-visual.tb-ldn-shawls__intro { max-width: 58ch; color: var(--tb-on-dark-muted); font-size: 1.04rem; line-height: 1.85; }
+.taabeer-site .e-con.tb-ldn-shawls__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 36px; width: 100%; padding-block: 8px 12px; }
+.taabeer-site .e-con.tb-ldn-shawl { display: flex; flex-direction: column; gap: 8px; padding-top: 18px; border-top: 1px solid rgba(231, 198, 108, 0.45); }
+.taabeer-site .tb-ldn-shawl .elementor-widget-heading { font-size: 1.6rem; }
+.taabeer-site .tb-ldn-shawl .elementor-widget-text-editor:not(.eyebrow) { color: var(--tb-on-dark-muted); font-size: 0.92rem; line-height: 1.7; }
+@media (max-width: 900px) {
+  .taabeer-site .e-con.tb-ldn-shawls { grid-template-columns: 1fr; }
+  .taabeer-site .e-con.tb-ldn-shawls__media { position: relative; top: auto; width: min(100%, 420px); justify-self: center; }
+}
+@media (max-width: 600px) {
+  .taabeer-site .e-con.tb-ldn-shawls__grid { grid-template-columns: 1fr; }
+}
+
+/* About: purpose */
+.taabeer-site .e-con.tb-ldn-purpose__wrap { padding-block: var(--tb-section); }
+.taabeer-site .e-con.tb-ldn-purpose__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(32px, 5vw, 72px); }
+.taabeer-site .e-con.tb-ldn-purpose { display: flex; flex-direction: column; gap: 14px; padding-top: 22px; border-top: 1px solid var(--taabeer-gold); }
+.taabeer-site .tb-ldn-purpose .elementor-widget-heading { font-size: clamp(1.7rem, 2.4vw, 2.2rem); line-height: 1.12; }
+.taabeer-site .tb-ldn-purpose .elementor-heading-title { color: var(--tb-ink); }
+.taabeer-site .tb-ldn-purpose .elementor-widget-text-editor { color: var(--taabeer-muted); font-size: 1.04rem; line-height: 1.85; }
+.taabeer-site .tb-hx-quote .tb-hx-quote__text blockquote { max-width: 34ch; }
+@media (max-width: 760px) { .taabeer-site .e-con.tb-ldn-purpose__grid { grid-template-columns: 1fr; } }
+
+/* Footer contact */
+.taabeer-site .tb-hx-footer__contact p + p { margin-top: 10px; }
+.taabeer-site .tb-hx-footer__contact em { color: var(--tb-gold-light); font-style: italic; font-size: 0.86rem; }
+.taabeer-site .tb-hx-footer__contact a { overflow-wrap: anywhere; }
+.taabeer-site .tb-hx-hero__image img { object-position: center 30%; }
+
+/* Mobile hero: keep the fade pinned to the photograph, never over the buttons. */
+@media (max-width: 760px) { .taabeer-site .e-con.tb-hx-hero__feature::after { top: 0; } }
