@@ -38,8 +38,8 @@ function taabeer_heritage_arts() {
 			'areas'   => array(
 				array( 'tile-embroidery.webp', 'Shawls', 'A considered selection of shawls celebrating rich patterns, beautiful textures and the enduring elegance of draped textiles.' ),
 				array( 'art-wear.webp', 'Clothing & Statement Jackets', 'Shirts, kurtas, complete outfits and dressy jackets that bring heritage influences into contemporary dressing.' ),
-				array( '', 'The Footwear Edit', 'Distinctive footwear selected for its design, character and ability to complement both traditional and contemporary wardrobes.' ),
-				array( '', 'The Headwear Edit', 'Thoughtfully selected head coverings and accessories that bring a finishing touch to personal style.' ),
+				array( 'london-footwear.webp', 'The Footwear Edit', 'Distinctive footwear selected for its design, character and ability to complement both traditional and contemporary wardrobes.' ),
+				array( 'london-headwear.webp', 'The Headwear Edit', 'Thoughtfully selected head coverings and accessories that bring a finishing touch to personal style.' ),
 			),
 		),
 		'art-of-living'    => array(
@@ -83,7 +83,7 @@ function taabeer_heritage_arts() {
 			'image'   => 'london-adornment.webp',
 			'card'    => 'london-adornment-card.webp',
 			'quote'   => 'Adornment is how heritage is carried closest to the heart.',
-			'feature' => array( 'bride-portrait.webp', 'Made to be inherited', 'Kundan setting, meenakari enamel and filigree are techniques passed from master to apprentice. We work with jewellers who keep these skills alive while designing pieces light enough for today and remarkable enough for the occasions that matter.' ),
+			'feature' => array( 'london-adornment-portrait.webp', 'Made to be inherited', 'Kundan setting, meenakari enamel and filigree are techniques passed from master to apprentice. We work with jewellers who keep these skills alive while designing pieces light enough for today and remarkable enough for the occasions that matter.' ),
 			'areas'   => array(
 				array( 'art-adornment.webp', 'Kundan & Polki', 'Statement necklaces and sets hand-set in the Mughal tradition.' ),
 				array( 'tile-jhumka.webp', 'Jhumkas & Earrings', 'Bell-shaped classics and contemporary drops, finished by hand.' ),

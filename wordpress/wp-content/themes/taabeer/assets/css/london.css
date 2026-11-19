@@ -94,3 +94,8 @@
 
 /* Mobile hero: keep the fade pinned to the photograph, never over the buttons. */
 @media (max-width: 760px) { .taabeer-site .e-con.tb-hx-hero__feature::after { top: 0; } }
+
+/* Four-up sub-sections (Wear, Living): square photographs so wide London shots read whole. */
+@media (min-width: 901px) {
+  .taabeer-site .e-con.tb-hx-areas--4 .tb-visual.tb-hx-area__image { aspect-ratio: 1 / 1; }
+}

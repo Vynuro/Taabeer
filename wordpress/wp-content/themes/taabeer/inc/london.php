@@ -257,7 +257,7 @@ function taabeer_london_patch_contact_tree( $nodes ) {
 }
 
 /** Copy a post's current layout to a draft labelled with this release, once. */
-function taabeer_london_archive( $post, $label ) {
+function taabeer_london_archive( $post, $label, $release = TAABEER_LONDON_VERSION ) {
 	$existing = get_posts(
 		array(
 			'post_type'      => $post->post_type,
@@ -265,7 +265,7 @@ function taabeer_london_archive( $post, $label ) {
 			'posts_per_page' => 1,
 			'meta_query'     => array(
 				array( 'key' => '_taabeer_archive_of', 'value' => $post->ID ),
-				array( 'key' => '_taabeer_archive_release', 'value' => TAABEER_LONDON_VERSION ),
+				array( 'key' => '_taabeer_archive_release', 'value' => $release ),
 			),
 		)
 	);
@@ -274,7 +274,7 @@ function taabeer_london_archive( $post, $label ) {
 	}
 	$id = taabeer_heritage_archive_copy( $post, $label );
 	if ( $id ) {
-		update_post_meta( $id, '_taabeer_archive_release', TAABEER_LONDON_VERSION );
+		update_post_meta( $id, '_taabeer_archive_release', $release );
 		if ( 'elementor-hf' === $post->post_type ) {
 			delete_post_meta( $id, 'ehf_target_include_locations' );
 		}
@@ -393,3 +393,158 @@ if ( defined( 'WP_CLI' ) && WP_CLI ) {
 		}
 	);
 }
+
+/* ---------------------------------------------------------------------------
+ * 2.1.1: the client's replacement photographs (2026-11-16).
+ * A targeted patch: only the named images change, so any edits made in
+ * Elementor since 2.1.0 are kept.
+ * ------------------------------------------------------------------------- */
+
+define( 'TAABEER_LONDON_PATCH', '2.1.1' );
+
+/** Swap an image widget's photograph and alt text, clearing the "photography to follow" style. */
+function taabeer_london_set_image( &$widget, $file, $alt ) {
+	$widget['settings']['image']        = array( 'url' => taabeer_art_image_url( $file ), 'id' => 0 );
+	$widget['settings']['taabeer_alt']  = $alt;
+	$widget['settings']['_css_classes'] = trim( preg_replace( '/\s+/', ' ', str_replace( 'tb-hx-area__image--pending', '', $widget['settings']['_css_classes'] ?? '' ) ) );
+}
+
+/** Sub-section cards: find the area by its heading and give it a photograph. */
+function taabeer_london_patch_areas( $nodes, $photos ) {
+	foreach ( $nodes as $i => $node ) {
+		if ( ! is_array( $node ) ) {
+			continue;
+		}
+		if ( false !== strpos( $node['settings']['css_classes'] ?? '', 'tb-hx-area' ) && ! empty( $node['elements'] ) ) {
+			$title = '';
+			foreach ( $node['elements'] as $child ) {
+				if ( 'heading' === ( $child['widgetType'] ?? '' ) ) {
+					$title = wp_strip_all_tags( $child['settings']['title'] ?? '' );
+				}
+			}
+			if ( isset( $photos[ $title ] ) ) {
+				foreach ( $node['elements'] as $j => $child ) {
+					if ( 'image' === ( $child['widgetType'] ?? '' ) ) {
+						taabeer_london_set_image( $node['elements'][ $j ], $photos[ $title ][0], $photos[ $title ][1] );
+						break;
+					}
+				}
+			}
+		}
+		if ( ! empty( $node['elements'] ) ) {
+			$node['elements'] = taabeer_london_patch_areas( $node['elements'], $photos );
+		}
+		$nodes[ $i ] = $node;
+	}
+	return $nodes;
+}
+
+/** Replace one photograph wherever it appears in the given section class. */
+function taabeer_london_patch_photo( $nodes, $section_class, $old_file, $new_file, $alt, $inside = false ) {
+	foreach ( $nodes as $i => $node ) {
+		if ( ! is_array( $node ) ) {
+			continue;
+		}
+		$here = $inside || false !== strpos( $node['settings']['css_classes'] ?? '', $section_class );
+		if ( $here && 'image' === ( $node['widgetType'] ?? '' ) && false !== strpos( $node['settings']['image']['url'] ?? '', '/' . $old_file ) ) {
+			taabeer_london_set_image( $node, $new_file, $alt );
+		}
+		if ( ! empty( $node['elements'] ) ) {
+			$node['elements'] = taabeer_london_patch_photo( $node['elements'], $section_class, $old_file, $new_file, $alt, $here );
+		}
+		$nodes[ $i ] = $node;
+	}
+	return $nodes;
+}
+
+function taabeer_london_patch_page( $slug, $callback ) {
+	$page = get_page_by_path( $slug, OBJECT, 'page' );
+	if ( ! $page ) {
+		return;
+	}
+	$tree = json_decode( (string) get_post_meta( $page->ID, '_elementor_data', true ), true );
+	if ( ! is_array( $tree ) ) {
+		return;
+	}
+	$new = call_user_func( $callback, $tree );
+	if ( $new !== $tree ) {
+		taabeer_london_archive( $page, get_the_title( $page ) . ' — before 2.1.1 photographs (archive)', TAABEER_LONDON_PATCH );
+		update_post_meta( $page->ID, '_elementor_data', wp_slash( wp_json_encode( $new ) ) );
+		delete_post_meta( $page->ID, '_elementor_element_cache' );
+		delete_post_meta( $page->ID, '_elementor_css' );
+	}
+}
+
+function taabeer_london_patch_apply() {
+	if ( TAABEER_LONDON_PATCH === get_option( 'taabeer_london_patch' ) ) {
+		return true;
+	}
+	if ( TAABEER_LONDON_VERSION !== get_option( 'taabeer_london' ) || ! function_exists( 'taabeer_visual_save' ) ) {
+		return false;
+	}
+	taabeer_london_patch_page(
+		'art-of-wear',
+		function ( $tree ) {
+			return taabeer_london_patch_areas(
+				$tree,
+				array(
+					'The Footwear Edit' => array( 'london-footwear.webp', 'Embroidered velvet khussas worn with ivory trousers on London stone steps' ),
+					'The Headwear Edit' => array( 'london-headwear.webp', 'A Chitrali pakol with feather and an embroidered cap from Pakistan, worn on a London street' ),
+				)
+			);
+		}
+	);
+	taabeer_london_patch_page(
+		'art-of-adornment',
+		function ( $tree ) {
+			return taabeer_london_patch_photo( $tree, 'tb-hx-split', 'bride-portrait.webp', 'london-adornment-portrait.webp', 'A woman in an ivory coat wearing kundan and pearl earrings and a matching ring on a London street' );
+		}
+	);
+	if ( class_exists( '\Elementor\Plugin' ) ) {
+		\Elementor\Plugin::instance()->files_manager->clear_cache();
+	}
+	update_option( 'taabeer_london_patch', TAABEER_LONDON_PATCH );
+	return true;
+}
+
+add_action(
+	'admin_init',
+	function () {
+		if ( wp_doing_ajax() || ! current_user_can( 'manage_options' ) || TAABEER_LONDON_PATCH === get_option( 'taabeer_london_patch' ) ) {
+			return;
+		}
+		taabeer_london_patch_apply();
+	},
+	61
+);
+
+if ( defined( 'WP_CLI' ) && WP_CLI ) {
+	WP_CLI::add_command(
+		'taabeer london-patch',
+		function () {
+			WP_CLI::log( taabeer_london_patch_apply() ? 'TAABEER 2.1.1 photographs applied.' : 'Apply TAABEER 2.1.0 first.' );
+		}
+	);
+}
+
+/* ---------------------------------------------------------------------------
+ * Sender identity: every email from the site is signed TAABEER, never the
+ * name of the hosting or WordPress account owner.
+ * ------------------------------------------------------------------------- */
+
+add_filter( 'wp_mail_from_name', fn() => 'TAABEER', 999 );
+add_action(
+	'phpmailer_init',
+	function ( $mailer ) {
+		$mailer->FromName = 'TAABEER';
+	},
+	999
+);
+add_filter(
+	'oembed_response_data',
+	function ( $data ) {
+		$data['author_name'] = 'TAABEER';
+		$data['author_url']  = home_url( '/' );
+		return $data;
+	}
+);
